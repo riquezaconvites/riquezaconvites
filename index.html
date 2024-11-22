@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de convites personalizados únicos para todos os momentos especiais.">
+    <title>Riqueza em Convites - Arte que Encanta</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #D1B69B;
+            color: #9F6B46;
+        }
+
+        header {
+            background-color: #9F6B46;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header img {
+            width: 150px;
+            border-radius: 50%;
+        }
+
+        nav {
+            margin: 20px 0;
+            text-align: center;
+            background-color: #DDC587;
+            padding: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #9F6B46;
+            font-weight: bold;
+            font-size: 1.2em;
+            letter-spacing: 1px;
+            transition: color 0.3s ease, font-size 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #fff;
+            font-size: 1.3em;
+        }
+
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #9F6B46;
+            color: #fff;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            max-width: 300px; /* Define a largura máxima */
+            border-radius: 8px; /* Borda arredondada */
+            cursor: pointer; /* Mostra que a imagem é clicável */
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            nav a {
+                font-size: 1em;
+                margin: 0 10px;
+            }
+
+            .section {
+                padding: 30px 10px;
+            }
+
+            footer {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            nav a {
+                font-size: 0.9em;
+                margin: 0 5px;
+            }
+
+            .section {
+                padding: 20px 5px;
+            }
+
+            footer {
+                padding: 10px;
+            }
+        }
+
+        .modal-body {
+            text-align: center;
+        }
+
+        .modal-body img {
+            width: 100%;
+            height: auto; /* Mantém a proporção da imagem */
+            max-height: 500px; /* Limita a altura máxima para melhor visualização */
+            object-fit: contain; /* Ajusta a imagem para caber dentro do espaço */
+        }
+
+        .modal-footer {
+            justify-content: space-between; /* Para os botões ficarem nas extremidades */
+        }
+
+        .contact-form {
+            background-color: #DDC587;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            margin: 0 auto; /* Centraliza o formulário */
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border: 1px solid #9F6B46;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .contact-form button {
+            background-color: #9F6B46;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #8B5E38;
+        }
+
+        .arrow {
+            cursor: pointer;
+            font-size: 2em;
+            color: #9F6B46;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://github.com/diogenesabreu/img/blob/main/WhatsApp%20Image%202024-10-07%20at%2009.15.46.jpeg?raw=true" alt="Logo Riqueza em Convites">
+    </header>
+
+    <nav>
+        <a href="#galeria">Galeria</a>
+        <a href="#sobre">Sobre Nós</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="section" id="galeria">
+        <h2>Galeria</h2>
+        <div class="gallery">
+            <img src="https://github.com/diogenesabreu/imgriqueza/blob/main/WhatsApp%20Image%202024-10-08%20at%2016.03.23%20(1).jpeg?raw=true" alt="Galeria 1" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(0)">
+            <img src="https://github.com/diogenesabreu/imgriqueza/blob/main/WhatsApp%20Image%202024-10-08%20at%2016.03.23.jpeg?raw=true" alt="Galeria 2" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(1)">
+            <img src="https://github.com/diogenesabreu/imgriqueza/blob/main/WhatsApp%20Image%202024-10-08%20at%2016.03.24.jpeg?raw=true" alt="Galeria 3" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(2)">
+            <img src="https://github.com/diogenesabreu/imgriqueza/blob/main/WhatsApp%20Image%202024-10-08%20at%2016.03.25.jpeg?raw=true" alt="Galeria 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(3)">
+            <img src="https://github.com/diogenesabreu/imgriqueza/blob/main/WhatsApp%20Image%202024-10-08%20at%2016.03.25%20(1).jpeg?raw=true" alt="Galeria 5" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(4)">
+        </div>
+    </div>
+
+    <div class="section" id="sobre">
+        <h2>Sobre Nós</h2>
+        <p>Na Riqueza em Convites, criamos convites personalizados que transformam momentos em lembranças eternas. Cada convite é uma obra de arte feita com carinho e dedicação para que você possa celebrar os momentos especiais da sua vida.</p>
+    </div>
+
+    <div class="section" id="contato">
+        <h2>Contato</h2>
+        <p>Para mais informações ou para solicitar um orçamento, preencha o formulário abaixo:</p>
+        <div class="contact-form">
+            <form id="contactForm" onsubmit="sendWhatsAppMessage(event)">
+                <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
+                <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Sua Mensagem" required></textarea>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Visualizar Imagem</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <span class="arrow" onclick="changeImage(-1)">&#10094;</span>
+                    <img id="modalImage" src="" alt="Imagem da Galeria">
+                    <span class="arrow" onclick="changeImage(1)">&#10095;</span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Riqueza em Convites - Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        let currentImageIndex = 0;
+        const images = [
+            "https://github.com/diogenesabreu/imgriqueza/blob/main/WhatsApp%20Image%202024-10-08%20at%2016.03.23%20(1).jpeg?raw=true",
+            "https://github.com/diogenesabreu/imgriqueza/blob/main/WhatsApp%20Image%202024-10-08%20at%2016.03.23.jpeg?raw=true",
+            "https://github.com/diogenesabreu/imgriqueza/blob/main/WhatsApp%20Image%202024-10-08%20at%2016.03.24.jpeg?raw=true",
+            "https://github.com/diogenesabreu/imgriqueza/blob/main/WhatsApp%20Image%202024-10-08%20at%2016.03.25.jpeg?raw=true",
+            "https://github.com/diogenesabreu/imgriqueza/blob/main/WhatsApp%20Image%202024-10-08%20at%2016.03.25%20(1).jpeg?raw=true"
+        ];
+
+        function openModal(index) {
+            currentImageIndex = index;
+            document.getElementById("modalImage").src = images[currentImageIndex];
+        }
+
+        function changeImage(direction) {
+            currentImageIndex += direction;
+            if (currentImageIndex < 0) {
+                currentImageIndex = images.length - 1;
+            } else if (currentImageIndex >= images.length) {
+                currentImageIndex = 0;
+            }
+            document.getElementById("modalImage").src = images[currentImageIndex];
+        }
+
+        function sendWhatsAppMessage(event) {
+            event.preventDefault();
+            const nome = document.getElementById("nome").value;
+            const email = document.getElementById("email").value;
+            const mensagem = document.getElementById("mensagem").value;
+
+            const url = `https://api.whatsapp.com/send?phone=5585991790443&text=Nome:%20${encodeURIComponent(nome)}%0AEmail:%20${encodeURIComponent(email)}%0AMensagem:%20${encodeURIComponent(mensagem)}`;
+
+            window.open(url, '_blank');
+            document.getElementById("contactForm").reset();
+        }
+    </script>
+</body>
+</html>
